@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <title>Liquor Store Demo App</title>
+
+  <!-- Framework7 CSS -->
+  <link rel="stylesheet"
+        href="https://unpkg.com/framework7@6.3.9/framework7-bundle.min.css"/>
+
+  <!-- Your Custom Styles -->
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json"/>
+</head>
+<body>
+  <!-- App root element -->
+  <div id="app">
+    <!-- Main view with tabs -->
+    <div class="view view-main tabs ios-edges toolbar-through">
+      <!-- Home Tab -->
+      <div id="tab-home" class="page tab tab-active">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="title">Home</div>
+          </div>
+        </div>
+        <div class="page-content">
+          <div class="block">
+            <img src="https://source.unsplash.com/collection/1127163/600x300"
+                 class="hero-img" alt="Store Interior"/>
+          </div>
+          <div class="block block-strong">
+            <h2>Browse & Order Local Spirits</h2>
+            <p>Curated craft beers, wines & spirits—delivered or pickup.</p>
+            <div class="row button-row">
+              <div class="col"><button class="button button-fill"
+                onclick="f7.views.main.router.navigate('/shop/')">Shop Now</button></div>
+              <div class="col"><button class="button button-outline"
+                onclick="f7.views.main.router.navigate('/profile/')">Join Loyalty</button></div>
+            </div>
+          </div>
+          <div class="block-title">Featured Products</div>
+          <div class="block no-padding">
+            <div class="row no-gutter">
+              <div class="col-50">
+                <div class="card product-card">
+                  <img src="https://source.unsplash.com/200x200/?beer" />
+                  <div class="card-content">
+                    <div class="card-content-inner">
+                      <p class="product-name">Cape May IPA</p>
+                      <p class="product-price">$8.00</p>
+                      <button class="button button-small button-fill">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-50">
+                <div class="card product-card">
+                  <img src="https://source.unsplash.com/200x200/?gin" />
+                  <div class="card-content">
+                    <div class="card-content-inner">
+                      <p class="product-name">Garden State Gin</p>
+                      <p class="product-price">$32.00</p>
+                      <button class="button button-small button-fill">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shop Tab -->
+      <div id="tab-shop" class="page tab">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="title">Shop</div>
+          </div>
+        </div>
+        <div class="page-content">
+          <div class="block">
+            <div class="segmented">
+              <button class="segmented-active">Beer</button>
+              <button>Wine</button>
+              <button>Spirits</button>
+            </div>
+          </div>
+          <div class="block-title">All Products</div>
+          <div class="block no-padding">
+            <div class="row no-gutter">
+              <div class="col-50">
+                <div class="card product-card">
+                  <img src="https://source.unsplash.com/200x200/?wine" />
+                  <div class="card-content">
+                    <div class="card-content-inner">
+                      <p class="product-name">Summer Rosé</p>
+                      <p class="product-price">$18.00</p>
+                      <div class="stars">★★★★☆</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-50">
+                <div class="card product-card">
+                  <img src="https://source.unsplash.com/200x200/?whiskey" />
+                  <div class="card-content">
+                    <div class="card-content-inner">
+                      <p class="product-name">Oak Barrel Whiskey</p>
+                      <p class="product-price">$45.00</p>
+                      <div class="stars">★★★★☆</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Orders Tab -->
+      <div id="tab-orders" class="page tab">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="title">Orders</div>
+          </div>
+        </div>
+        <div class="page-content">
+          <div class="block">
+            <label class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Enable Notifications</div>
+                <div class="item-input-wrap">
+                  <input type="checkbox" checked />
+                </div>
+              </div>
+            </label>
+          </div>
+          <div class="block-title">Recent Orders</div>
+          <div class="list">
+            <ul>
+              <li class="item-content">
+                <div class="item-media">
+                  <img src="https://source.unsplash.com/50x50/?beer" class="order-thumb"/>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Order #1234</div>
+                  </div>
+                  <div class="item-subtitle">$56.00</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-media">
+                  <img src="https://source.unsplash.com/50x50/?wine" class="order-thumb"/>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Order #1220</div>
+                  </div>
+                  <div class="item-subtitle">$32.00</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Tab -->
+      <div id="tab-profile" class="page tab">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="title">Profile</div>
+          </div>
+        </div>
+        <div class="page-content">
+          <div class="block block-strong">
+            <h2>You have <strong>450</strong> pts</h2>
+          </div>
+          <div class="block">
+            <button class="button button-fill"
+                    onclick="f7.views.main.router.navigate('/home/')">
+              Locate a Store 📍
+            </button>
+          </div>
+          <div class="block-title">Upcoming Events</div>
+          <div class="list">
+            <ul>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">7/20 – Wine Tasting @ Main St</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">7/25 – Craft Beer Demo @ Elm Ave</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Tabbar -->
+    <div class="toolbar toolbar-bottom tabbar">
+      <a href="#tab-home" class="tab-link tab-link-active">Home</a>
+      <a href="#tab-shop" class="tab-link">Shop</a>
+      <a href="#tab-orders" class="tab-link">Orders</a>
+      <a href="#tab-profile" class="tab-link">Profile</a>
+    </div>
+  </div>
+
+  <!-- Framework7 JS -->
+  <script src="https://unpkg.com/framework7@6.3.9/framework7-bundle.min.js"></script>
+  <script>
+    // Init app
+    const f7 = new Framework7({
+      root: '#app',
+      name: 'NJ Liquor Demo',
+      id: 'com.nj.liquordemo',
+      theme: 'auto',
+      view: { stackPages: true },
+      routes: [
+        { path: '/home/', url: '#tab-home' },
+        { path: '/shop/', url: '#tab-shop' },
+        { path: '/orders/', url: '#tab-orders' },
+        { path: '/profile/', url: '#tab-profile' },
+      ],
+    });
+  </script>
+</body>
+</html>

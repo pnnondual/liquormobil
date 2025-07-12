@@ -1,0 +1,7 @@
+/* Override Framework7 Defaults */
+.hero-img { border-radius: 8px; }
+.button-row .button { font-weight: bold; }
+.product-card img { border-radius: 8px; }
+.product-name { font-weight: 600; margin: 0; }
+.product-price { color: #D32F2F; margin: .25rem 0; }
+.order-thumb { border-radius: 4px; }
